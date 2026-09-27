@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitBuddy AI Fitness Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="brand">
+            <span class="brand-icon">✦</span>
+            <div>
+                FitBuddy
+                <small>AI FITNESS STUDIO</small>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#dashboard" class="nav-link active">▦ Dashboard</a>
+            <a href="#planner" class="nav-link">✚ Create Plan</a>
+            <a href="#progress" class="nav-link">◷ My Progress</a>
+            <a href="#history" class="nav-link">▤ Plan History</a>
+        </nav>
+
+        <div class="sidebar-card">
+            <div class="sidebar-emoji">⚡</div>
+            <h3>Small steps.<br>Big changes.</h3>
+            <p>Stay consistent and celebrate every workout.</p>
+        </div>
+
+        <div class="sidebar-footer">
+            ● Gemini AI Connected
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <header class="topbar">
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+            <div>
+                <p class="eyebrow">YOUR PERSONAL FITNESS SPACE</p>
+                <h1 id="greeting">Welcome, Champion ✦</h1>
+            </div>
+
+            <button class="theme-btn" id="themeBtn">☾</button>
+        </header>
+
+        <!-- Dashboard Hero -->
+        <section class="hero" id="dashboard">
+            <div class="hero-content">
+                <span class="hero-badge">✦ YOUR JOURNEY STARTS HERE</span>
+
+                <h2>Build a stronger<br><span>you.</span></h2>
+
+                <p>
+                    Create a fitness plan tailored to your goals,
+                    schedule and experience with your AI workout companion.
+                </p>
+
+                <a href="#planner" class="primary-btn">
+                    Create My Plan ↗
+                </a>
+            </div>
+
+            <div class="hero-art">
+                <div class="hero-circle"></div>
+                <div class="hero-person">🏋️</div>
+                <div class="floating-card">🔥 Stay consistent</div>
+                <div class="floating-card second">✦ AI Workout Plan</div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <div class="stat-icon purple">◷</div>
+                <div>
+                    <p>Workouts Completed</p>
+                    <h2 id="statWorkouts">0</h2>
+                    <small>Keep showing up!</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">♧</div>
+                <div>
+                    <p>Active Days</p>
+                    <h2 id="statDays">0</h2>
+                    <small>This week</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">⚡</div>
+                <div>
+                    <p>Current Streak</p>
+                    <h2><span id="statStreak">0</span> days</h2>
+                    <small>One day at a time</small>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Fitness Planner -->
+        <section class="content-grid">
+
+            <div class="panel" id="planner">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">PERSONALIZED FOR YOU</p>
+                        <h2>Create Your Fitness Plan</h2>
+                    </div>
+                    <span class="ai-badge">AI ✦</span>
+                </div>
+
+                <p class="description">
+                    Enter your details to generate your personalized
+                    fitness plan using Gemini AI.
+                </p>
+
+                <form id="planForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name"
+                                   placeholder="Enter your name"
+                                   maxlength="40" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="age">Your Age</label>
+                            <input type="number" id="age"
+                                   min="13" max="100"
+                                   placeholder="Enter your age" required>
+                        </div>
+
+                        <div class="form-group full">
+                            <label>Select Your Fitness Goal</label>
+
+                            <div class="goal-options">
+
+                                <label class="goal-option">
+                                    <input type="radio" name="goal"
+                                           value="Build muscle" checked>
+                                    <span>💪</span>
+                                    <b>Build Muscle</b>
+                                </label>
+
+                                <label class="goal-option">
+                                    <input type="radio" name="goal"
+                                           value="Lose weight">
+                                    <span>🏃</span>
+                                    <b>Lose Weight</b>
+                                </label>
+
+                                <label class="goal-option">
+                                    <input type="radio" name="goal"
+                                           value="Improve fitness">
+                                    <span>⚡</span>
+                                    <b>Get Fitter</b>
+                                </label>
+
+                                <label class="goal-option">
+                                    <input type="radio" name="goal"
+                                           value="Stay healthy">
+                                    <span>🌿</span>
+                                    <b>Stay Healthy</b>
+                                </label>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="level">Experience Level</label>
+                            <select id="level">
+                                <option>Beginner</option>
+                                <option>Intermediate</option>
+                                <option>Advanced</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="days">Days Per Week</label>
+                            <select id="days">
+                                <option value="2">2 Days</option>
+                                <option value="3" selected>3 Days</option>
+                                <option value="4">4 Days</option>
+                                <option value="5">5 Days</option>
+                                <option value="6">6 Days</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="equipment">Available Equipment</label>
+                            <select id="equipment">
+                                <option>No equipment / Bodyweight</option>
+                                <option>Dumbbells</option>
+                                <option>Full Gym</option>
+                                <option>Resistance Bands</option>
+                                <option>Home Gym / Mixed</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="notes">Additional Preferences</label>
+                            <textarea id="notes" rows="3"
+                                maxlength="500"
+                                placeholder="Your schedule or workout preferences (optional)"></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="form-footer">
+                        <span>🔒 API key protected on server</span>
+
+                        <button type="submit" class="primary-btn"
+                                id="generateBtn">
+                            Generate My Plan ✦
+                        </button>
+                    </div>
+
+                </form>
+
+                <p id="formMessage" class="message"></p>
+            </div>
+
+            <!-- Fitness Tips -->
+            <div class="panel tips-panel">
+                <p class="eyebrow">FITNESS NOTE</p>
+                <div class="tip-emoji">💧</div>
+
+                <h2>Progress over perfection</h2>
+
+                <p class="description">
+                    A manageable routine you can repeat is more useful
+                    than an intense plan you cannot sustain.
+                </p>
+
+                <hr>
+
+                <div class="tip">
+                    <span>✦</span>
+                    <div>
+                        <b>Warm up first</b>
+                        <p>Start with 5–10 minutes of easy movement.</p>
+                    </div>
+                </div>
+
+                <div class="tip">
+                    <span>✦</span>
+                    <div>
+                        <b>Listen to your body</b>
+                        <p>Stop if you experience pain or dizziness.</p>
+                    </div>
+                </div>
+
+                <div class="tip">
+                    <span>✦</span>
+                    <div>
+                        <b>Rest matters</b>
+                        <p>Allow recovery between challenging sessions.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Generated Plan -->
+        <section class="panel plan-panel hidden" id="planSection">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR AI GENERATED ROUTINE</p>
+                    <h2 id="planTitle">Your Fitness Plan</h2>
+                </div>
+
+                <button class="outline-btn" id="savePlanBtn">
+                    Save Plan
+                </button>
+            </div>
+
+            <div id="planMeta" class="plan-meta"></div>
+
+            <div id="planOutput" class="plan-output"></div>
+
+            <div class="section-heading checklist-heading">
+                <div>
+                    <h3>Workout Checklist</h3>
+                    <p class="description">
+                        Tick your workouts when you finish them.
+                    </p>
+                </div>
+            </div>
+
+            <div id="workoutChecklist" class="workout-checklist"></div>
+
+            <button class="outline-btn copy-btn" id="copyPlanBtn">
+                Copy Fitness Plan
+            </button>
+
+        </section>
+
+        <!-- Progress -->
+        <section class="content-grid lower-grid" id="progress">
+
+            <div class="panel">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">CONSISTENCY COUNTS</p>
+                        <h2>Weekly Activity</h2>
+                    </div>
+                    <span class="ai-badge">7 Days</span>
+                </div>
+
+                <div class="activity-chart" id="activityChart"></div>
+
+                <div class="chart-footer">
+                    <span>🟣 Completed workouts</span>
+                    <b id="chartSummary">0 this week</b>
+                </div>
+            </div>
+
+            <div class="panel quote-panel">
+                <div class="quote-mark">“</div>
+
+                <h2 id="quoteText">
+                    The secret of getting ahead is getting started.
+                </h2>
+
+                <p>— Fitness Motivation</p>
+
+                <button class="outline-btn" id="newQuoteBtn">
+                    Another Reminder ↗
+                </button>
+            </div>
+
+        </section>
+
+        <!-- History -->
+        <section class="panel history-panel" id="history">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR SAVED ROUTINES</p>
+                    <h2>Plan History</h2>
+                </div>
+
+                <button class="text-btn" id="clearHistoryBtn">
+                    Clear History
+                </button>
+            </div>
+
+            <div id="historyList" class="history-list">
+                <div class="empty-state">
+                    Your saved plans will appear here.
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            FitBuddy ✦ Your AI Fitness Companion
+            <br>
+            For general fitness information only.
+            Consult a qualified professional before starting a new exercise routine.
+        </footer>
+
+    </main>
+</div>
+
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
