@@ -30,3 +30,6 @@ Check that `.env` is not staged or committed.
 
 ## Safety
 Educational information only, not medical advice. Stop if exercise causes pain and consult a qualified professional for medical concerns.
+
+
+Github Link :https://kartheesanv1-cmd.github.io/fitbuddy-ai-fitness/
