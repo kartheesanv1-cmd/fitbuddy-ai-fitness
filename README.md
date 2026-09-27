@@ -33,3 +33,5 @@ Educational information only, not medical advice. Stop if exercise causes pain a
 
 
 Github Link :https://kartheesanv1-cmd.github.io/fitbuddy-ai-fitness/
+
+Run link : node server.js
